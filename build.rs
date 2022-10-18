@@ -260,7 +260,7 @@ fn cc_tensorflow_library() {
             .files(get_files_glob(
                 tflite.join("lite/experimental/microfrontend/lib/*.c"),
             ))
-            .file(tflite.join("lite/c/common.c"))
+            .file(tflite.join("lite/c/common.cc"))
             .file(tflite.join("lite/core/api/error_reporter.cc"))
             .file(tflite.join("lite/core/api/flatbuffer_conversions.cc"))
             .file(tflite.join("lite/core/api/op_resolver.cc"))
