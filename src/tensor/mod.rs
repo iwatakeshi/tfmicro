@@ -113,11 +113,10 @@ impl Tensor {
     where
         T: ElemTypeOf,
     {
-        assert!(
-            self.element_type().unwrap() == T::elem_type_of(),
-            "Type `{:?}` does not match the original type `{:?}`",
-            T::elem_type_of(),
-            self.0.type_
+        assert_eq!(
+            self.element_type().unwrap(),
+            T::elem_type_of(), "Type `{:?}` does not match the original type `{:?}`",
+            T::elem_type_of(), self.0.type_
         );
 
         unsafe {
@@ -142,11 +141,10 @@ impl Tensor {
     where
         T: ElemTypeOf,
     {
-        assert!(
-            self.element_type().unwrap() == T::elem_type_of(),
+        assert_eq!(
+            self.element_type().unwrap(), T::elem_type_of(),
             "Type `{:?}` does not match the original type `{:?}`",
-            T::elem_type_of(),
-            self.0.type_
+            T::elem_type_of(), self.0.type_
         );
 
         unsafe {
