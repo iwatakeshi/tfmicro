@@ -44,9 +44,9 @@ To debug `build.rs` itself, try `cargo build -vv`
 
 ## Updating tensorflow
 
-Some tips for trying out new tensorflow verions
+Some tips for trying out new tensorflow versions
 
-#### Use the build script to automatically run git biscect
+#### Use the build script to automatically run git bisect
 
 ```
 cd submodules/tensorflow
